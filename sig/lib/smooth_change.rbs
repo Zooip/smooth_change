@@ -1,0 +1,6 @@
+module SmoothChange
+  class Error < StandardError
+  end
+
+  def self.configuration: () -> Configuration
+end

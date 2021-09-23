@@ -1,0 +1,15 @@
+module SmoothChange
+  class Feature
+    attr_accessor name: String
+
+    attr_accessor mode: Symbol
+
+    def initialize: (String name, String | Symbol mode) -> void
+
+    def mode=: ( String | Symbol value) -> Symbol
+
+    def enabled_with?: (ClientFeatureToggler feature_toggler) -> bool
+
+    def default_enabled_value: () -> bool
+  end
+end

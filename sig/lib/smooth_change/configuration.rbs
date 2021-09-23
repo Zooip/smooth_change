@@ -1,0 +1,7 @@
+module SmoothChange
+  class Configuration
+
+    attr_writer http_header_name: String
+    def http_header_name: () -> String
+  end
+end

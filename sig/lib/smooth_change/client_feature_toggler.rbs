@@ -1,0 +1,20 @@
+module SmoothChange
+  # Store client features requirements
+  class ClientFeatureToggler
+    type value_store = Hash[Symbol, bool | nil]
+
+    @values: value_store
+    # @param [Hash] values
+    def initialize: (Hash[Symbol | String, bool?] values) -> void
+
+    def values: () -> value_store
+
+    # @param [String, Symbol] feature
+    # @return [Boolean, nil]
+    def value_for: (String | Symbol feature) -> bool?
+
+    # @param [String] http_header_value
+    # @return [SmoothChange::ClientToggler]
+    def self.from_http_header: (String http_header_value) -> ClientFeatureToggler
+  end
+end
