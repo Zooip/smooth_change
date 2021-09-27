@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
- require "active_model/railtie"
+require "active_model/railtie"
 # require "active_job/railtie"
 # require "active_record/railtie"
 # require "active_storage/engine"
@@ -22,7 +24,7 @@ Bundler.require(*Rails.groups)
 module Dummy
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults ENV['RAILS_VERSION'].sub(/\.[0-9]\Z/,"") || '6.0'
+    config.load_defaults ENV["RAILS_VERSION"].sub(/\.[0-9]\Z/, "") || "6.0"
 
     # Configuration for the application, engines, and railties goes here.
     #

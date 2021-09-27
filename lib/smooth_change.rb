@@ -20,6 +20,4 @@ module SmoothChange # rubocop:disable Style/Documentation
       @configuration ||= Configuration.new
     end
   end
-
-
 end

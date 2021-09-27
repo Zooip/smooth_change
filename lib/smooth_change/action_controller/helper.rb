@@ -13,13 +13,13 @@ module SmoothChange
       end
 
       def smooth_change
-        @toggler ||= SmoothChange::ClientFeatureToggler.from_http_header(http_header_value)
+        @smooth_change ||= SmoothChange::ClientFeatureToggler.from_http_header(http_header_value)
       end
 
       private
 
       def http_header_value
-        request.headers.fetch(SmoothChange.configuration.http_header_name,"")
+        request.headers.fetch(SmoothChange.configuration.http_header_name, "")
       end
     end
   end

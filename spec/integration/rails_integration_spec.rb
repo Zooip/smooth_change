@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 require_relative "../rails_helper"
 
 RSpec.describe "Rails", type: :request do
-
   describe "opt_in feature" do
-
     before do
       get "/api/test_opt_in", headers: headers
     end
@@ -34,7 +34,6 @@ RSpec.describe "Rails", type: :request do
   end
 
   describe "opt_out feature" do
-
     before do
       get "/api/test_opt_out", headers: headers
     end
@@ -65,7 +64,6 @@ RSpec.describe "Rails", type: :request do
   end
 
   describe "Feature in model" do
-
     before do
       get "/api/test_model", headers: headers
     end
@@ -94,5 +92,4 @@ RSpec.describe "Rails", type: :request do
       end
     end
   end
-
 end

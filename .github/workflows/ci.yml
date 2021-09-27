@@ -9,7 +9,7 @@ jobs:
         uses: andrewmcodes-archive/rubocop-linter-action@v3.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-s
+
   test:
     name: Test on ruby ${{ matrix.ruby }} and rails ${{ matrix.rails }}
     runs-on: ubuntu-latest

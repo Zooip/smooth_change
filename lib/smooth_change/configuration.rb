@@ -10,8 +10,6 @@ module SmoothChange
     attr_accessor :http_header_name,
                   :adapter
 
-
-
     private
 
     def set_defaults!
