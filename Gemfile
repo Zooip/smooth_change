@@ -6,3 +6,5 @@ source "https://rubygems.org"
 gemspec
 
 gem "rails", "~> #{ENV["RAILS_VERSION"] || "6.0"}"
+
+gem "simplecov", require: false, group: :test

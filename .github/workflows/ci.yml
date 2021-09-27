@@ -41,3 +41,37 @@ jobs:
         run: |
           bundle install --jobs 4 --retry 3
           bundle exec rspec
+
+  coverage:
+    name: "Check coverage"
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Do some action caching
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-2.7-6.1.0-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-2.7-6.1.0-
+      - name: Set up Ruby 2.7
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+      - name: Install bundler
+        run: gem install bundler
+      - name: Run bundler
+        env:
+          RAILS_VERSION: 6.1.0
+        run: |
+          bundle install --jobs 4 --retry 3
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: ${{secrets.CODE_CLIMATE_REPORTER_ID}}
+        with:
+          coverageCommand: bundle exec rspec
+          debug: true

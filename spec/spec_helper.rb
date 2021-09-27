@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "simplecov"
+
 require "smooth_change"
 
 RSpec.configure do |config|

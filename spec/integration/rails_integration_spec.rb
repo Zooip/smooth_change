@@ -2,7 +2,7 @@
 
 require_relative "../rails_helper"
 
-RSpec.describe "Rails", type: :request do
+RSpec.describe "Rails integration", type: :request do
   describe "opt_in feature" do
     before do
       get "/api/test_opt_in", headers: headers

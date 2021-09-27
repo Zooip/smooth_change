@@ -24,7 +24,7 @@ Bundler.require(*Rails.groups)
 module Dummy
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults ENV["RAILS_VERSION"].sub(/\.[0-9]\Z/, "") || "6.0"
+    config.load_defaults ENV["RAILS_VERSION"]&.sub(/\.[0-9]\Z/, "") || "6.0"
 
     # Configuration for the application, engines, and railties goes here.
     #

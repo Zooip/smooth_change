@@ -1,5 +1,8 @@
 # SmoothChange
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/48a49429c6d98780a96e/maintainability)](https://codeclimate.com/github/Zooip/smooth_change/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/48a49429c6d98780a96e/test_coverage)](https://codeclimate.com/github/Zooip/smooth_change/test_coverage)
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/smooth_change`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
@@ -29,6 +32,12 @@ TODO: Write usage instructions here
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Road Map
+* Instrumentation
+* Framework agnostic (remove dependencies from rails and move helpers to dedicated gem)
+* Response helpers
+
 
 ## Contributing
 
