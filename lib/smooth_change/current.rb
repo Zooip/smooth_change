@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "active_support/current_attributes"
+require "active_support"
 
 module SmoothChange
   class Current < ActiveSupport::CurrentAttributes
