@@ -18,6 +18,11 @@ module SmoothChange
       values[feature.to_sym]
     end
 
+    def enabled?(feature_name)
+      feature = find_feature(feature_name)
+      feature.enabled_with?(self)
+    end
+
     # Http header is expected to be a comma separated list like :
     #   "feature1, !feature2, feature3"
     # Spaces between elements are ignored
@@ -33,6 +38,18 @@ module SmoothChange
         memo[feature_name] = enabled
       end
       new(values)
+    end
+
+    private
+
+    def adapter
+      SmoothChange.configuration.adapter
+    end
+
+    # @return [SmoothChange::Feature]
+    # @param [String] feature_name
+    def find_feature(feature_name)
+      adapter.get(feature_name)
     end
   end
 end

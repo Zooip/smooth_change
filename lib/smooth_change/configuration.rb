@@ -7,12 +7,16 @@ module SmoothChange
       set_defaults!
     end
 
-    attr_accessor :http_header_name
+    attr_accessor :http_header_name,
+                  :adapter
+
+
 
     private
 
     def set_defaults!
       self.http_header_name = "X-ApiFeatureFlags"
+      self.adapter = nil # @TODO
     end
   end
 end

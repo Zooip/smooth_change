@@ -22,9 +22,11 @@ module SmoothChange
               end
     end
 
+    # @return [Boolean]
     def enabled_with?(feature_toggler)
       value = feature_toggler.value_for(name)
-      default_enabled_value if value.nil?
+      return default_enabled_value if value.nil?
+
       !!value
     end
 

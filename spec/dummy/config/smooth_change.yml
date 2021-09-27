@@ -1,0 +1,7 @@
+features:
+  feature_opt_in:
+    mode: opt_in
+  feature_opt_out:
+    mode: opt_out
+  feature_model:
+    mode: opt_in

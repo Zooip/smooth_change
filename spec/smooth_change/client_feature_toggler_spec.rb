@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "../spec_helper"
+require_relative "../rails_helper"
 
 RSpec.describe SmoothChange::ClientFeatureToggler do
   describe ".from_http_header" do
