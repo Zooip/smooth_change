@@ -1,5 +1,6 @@
 # SmoothChange
 
+[![Gem Version](https://badge.fury.io/rb/smooth_change.svg)](https://badge.fury.io/rb/smooth_change)
 [![Maintainability](https://api.codeclimate.com/v1/badges/48a49429c6d98780a96e/maintainability)](https://codeclimate.com/github/Zooip/smooth_change/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/48a49429c6d98780a96e/test_coverage)](https://codeclimate.com/github/Zooip/smooth_change/test_coverage)
 
