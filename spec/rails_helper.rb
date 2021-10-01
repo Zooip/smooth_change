@@ -3,6 +3,6 @@
 ENV["RAILS_ENV"] = "test"
 
 require_relative "./spec_helper"
-require_relative File.expand_path("dummy/config/environment", __dir__)
+require_relative "./dummy/config/environment"
 
 require "rspec/rails"
