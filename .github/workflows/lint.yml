@@ -19,5 +19,6 @@ jobs:
           ruby-version: 2.7
       - name: Run Steep check
         run: |
-          gem install steep
+          gem install steep rbs
+          rbs collection install
           steep check
