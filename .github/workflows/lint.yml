@@ -17,8 +17,11 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
+      - name: Install Dependencies
+        run: |
+          gem install steep rbs bundler
+          bundle install
+          rbs collection install
       - name: Run Steep check
         run: |
-          gem install steep rbs
-          rbs collection install
           steep check
