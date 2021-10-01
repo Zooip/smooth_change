@@ -6,6 +6,7 @@ require_relative "smooth_change/client_feature_toggler"
 require_relative "smooth_change/feature"
 require_relative "smooth_change/current"
 require_relative "smooth_change/adapters/yaml"
+require_relative "smooth_change/adapters/memory"
 require_relative "smooth_change/action_controller/helper"
 
 module SmoothChange # rubocop:disable Style/Documentation

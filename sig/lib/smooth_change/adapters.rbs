@@ -1,0 +1,14 @@
+module SmoothChange
+  type feature_dictionary = Hash[(String), (Feature | nil)]
+
+  module Adapters
+
+    interface _Adapter
+      def features: () -> feature_dictionary
+
+      # @return [Feature]
+      # @param [string] feature_name
+      def get: (String | Symbol feature_name) -> (Feature)
+    end
+  end
+end

@@ -1,20 +1,29 @@
 module SmoothChange
   # Store client features requirements
   class ClientFeatureToggler
-    type value_store = Hash[Symbol, bool | nil]
+    def initialize: (?::Hash[String|Symbol, bool|nil] values) -> void
 
-    @values: value_store
-    # @param [Hash] values
-    def initialize: (Hash[Symbol | String, bool?] values) -> void
+    def values: () -> ::Hash[Symbol, bool|nil]
 
-    def values: () -> value_store
+    # if true : feature is wanted
+    # if false : feature is explicitly not wanted
+    # if nil : not specified
+    def value_for: (String|Symbol feature) -> (bool|nil)
 
-    # @param [String, Symbol] feature
-    # @return [Boolean, nil]
-    def value_for: (String | Symbol feature) -> bool?
+    def enabled?: (String|Symbol feature_name) -> (bool)
 
-    # @param [String] http_header_value
-    # @return [SmoothChange::ClientToggler]
+    # Http header is expected to be a comma separated list like :
+    #   "feature1, !feature2, feature3"
+    # Spaces between elements are ignored
+    # A leading "!" means the feature request is opt-out
     def self.from_http_header: (String http_header_value) -> ClientFeatureToggler
+
+    private
+
+    def adapter: () -> Adapters::_Adapter
+
+    # @return [SmoothChange::Feature]
+    # @param [String] feature_name
+    def find_feature: (String|Symbol feature_name) -> Feature
   end
 end

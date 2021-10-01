@@ -38,6 +38,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rubocop", "~> 1.21"
   spec.add_development_dependency "rubocop-performance", "~> 1.11"
   spec.add_development_dependency "rubocop-rspec", "~> 2.5"
+  spec.add_development_dependency "steep", '~> 0.46.0'
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html

@@ -1,0 +1,10 @@
+module SmoothChange
+  module Adapters
+    # Load features from a YAML file
+    class Memory
+      def initialize: (?features: ::Hash[String, Feature] features) -> void
+
+      include _Adapter
+    end
+  end
+end

@@ -1,0 +1,3 @@
+module SmoothChange
+  VERSION: ::String
+end

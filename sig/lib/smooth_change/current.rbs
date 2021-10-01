@@ -1,0 +1,11 @@
+module SmoothChange
+  # Thread safe Rails request store
+  class Current < ActiveSupport::CurrentAttributes
+
+    def self.smooth_change=: (ClientFeatureToggler) -> ClientFeatureToggler
+    def smooth_change=: (ClientFeatureToggler) -> ClientFeatureToggler
+
+    def smooth_change: () -> ClientFeatureToggler
+    def self.smooth_change: () -> ClientFeatureToggler
+  end
+end

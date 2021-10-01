@@ -1,7 +1,14 @@
 module SmoothChange
+  # Store SmoothChange gem's global configuration
   class Configuration
+    def initialize: () -> void
 
-    attr_writer http_header_name: String
-    def http_header_name: () -> String
+    attr_accessor http_header_name: ::String
+
+    attr_accessor adapter: Adapters::_Adapter
+
+    private
+
+    def set_defaults!: () -> void
   end
 end

@@ -1,6 +1,9 @@
 module SmoothChange
+  # rubocop:disable Style/Documentation
   class Error < StandardError
   end
+
+  def self.configure: () { (Configuration) -> void } -> void
 
   def self.configuration: () -> Configuration
 end

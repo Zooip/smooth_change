@@ -646,3 +646,84 @@ Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 100)
 Started GET "/api/test_model" for 127.0.0.1 at 2021-09-27 13:19:46 +0200
 Processing by ApiController#test_model as HTML
 Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 100)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-09-28 09:12:06 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 5ms (Views: 0.2ms | Allocations: 3388)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-09-28 09:12:06 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 97)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-09-28 09:12:06 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 97)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-09-28 09:12:06 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 96)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-09-28 09:12:06 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 97)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-09-28 09:12:06 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 97)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-09-28 09:12:06 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 179)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-09-28 09:12:06 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 100)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-09-28 09:12:07 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 100)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 4ms (Views: 0.2ms | Allocations: 3388)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 97)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 97)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 96)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 97)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 97)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 179)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 100)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-09-28 18:14:43 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 100)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 9ms (Views: 0.2ms | Allocations: 5007)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 659)
+Started GET "/api/test_opt_in" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_opt_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 659)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 690)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 659)
+Started GET "/api/test_opt_out" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_opt_out as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 659)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 851)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 662)
+Started GET "/api/test_model" for 127.0.0.1 at 2021-10-02 01:13:15 +0200
+Processing by ApiController#test_model as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 662)

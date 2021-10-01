@@ -7,8 +7,8 @@ module SmoothChange
     attr_reader :mode
 
     def initialize(name, mode)
-      self.name = name
-      self.mode = mode
+      self.name = name.to_s
+      self.mode = mode.to_sym
     end
 
     # @param [String,Symbol] value

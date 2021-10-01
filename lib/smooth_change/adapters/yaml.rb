@@ -6,21 +6,23 @@ module SmoothChange
     class Yaml
       def initialize(file:)
         @file_content = if file.respond_to?(:read)
+                          # @type var file: IO
                           file.read
                         else
-                          File.read(file)
+                          # @type var file: String
+                          File.read(file.to_s)
                         end
         parse_file
       end
 
       def features
-        @features ||= {}.with_indifferent_access
+        @features ||= HashWithIndifferentAccess.new
       end
 
       # @return [Feature]
       # @param [string] feature_name
       def get(feature_name)
-        @features[feature_name]
+        features[feature_name.to_s] || Feature.new(feature_name, :opt_in)
       end
 
       private

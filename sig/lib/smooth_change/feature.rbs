@@ -1,15 +1,21 @@
 module SmoothChange
+  # A feature to be mentioned by a feature flag
   class Feature
-    attr_accessor name: String
+    attr_accessor name: ::String
 
-    attr_accessor mode: Symbol
+    attr_reader mode: ::Symbol
 
-    def initialize: (String name, String | Symbol mode) -> void
+    def initialize: (String|Symbol name, String|Symbol mode) -> void
 
-    def mode=: ( String | Symbol value) -> Symbol
+    # @param [String,Symbol] value
+    # @return [String,Symbol] value
+    # @raise ArgumentError on unexpected value
+    def mode=: (String|Symbol value) -> ::Symbol
 
+    # @return [Boolean]
     def enabled_with?: (ClientFeatureToggler feature_toggler) -> bool
 
+    # @return [Boolean]
     def default_enabled_value: () -> bool
   end
 end

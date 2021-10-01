@@ -1,0 +1,19 @@
+
+
+
+module SmoothChange
+
+  module Adapters
+
+    # Load features from a YAML file
+    class Yaml
+      include _Adapter
+
+      def initialize: (file: IO|String|Pathname file) -> void
+
+      private
+
+      def parse_file: () -> void
+    end
+  end
+end

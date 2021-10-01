@@ -1,14 +1,6 @@
-name: CI
+name: Tests
 on: [push, pull_request]
 jobs:
-  rubocop-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: RuboCop Linter Action
-        uses: andrewmcodes-archive/rubocop-linter-action@v3.3.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   test:
     name: Test on ruby ${{ matrix.ruby }} and rails ${{ matrix.rails }}
@@ -35,12 +27,20 @@ jobs:
           ruby-version: ${{ matrix.ruby }}
       - name: Install bundler
         run: gem install bundler
-      - name: Run Rake with Rails ${{ matrix.rails }}
-        env:
-          RAILS_VERSION: ${{ matrix.rails }}
+      - name: Run Bundler
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Run RSpec with RBS
+        if: matrix.ruby == '2.7' && matrix.rails == '6.0.0'
         run: |
-          bundle install --jobs 4 --retry 3
-          bundle exec rspec
+          gem install rbs
+          rbs collection install
+          RBS_TEST_TARGET="Rubanok::*" RUBYOPT="-rrbs/test/setup" bundle exec rspec --force-color
+      - name: Run RSpec without RBS
+        if: matrix.ruby != '2.7' || matrix.rails != '6.0.0'
+        run: |
+          bundle exec rspec --force-color
+
 
   coverage:
     name: "Check coverage"

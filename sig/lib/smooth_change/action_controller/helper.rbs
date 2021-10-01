@@ -1,0 +1,19 @@
+module SmoothChange
+  module ActionController
+    # Add helper methods to use SmoothChange in your Rails's ActionControllers
+    module Helper
+      extend ActiveSupport::Concern
+
+      # Shoul be inclded from parent
+      def request: () -> ActionDispatch::Request
+
+      def store_smooth_change: () -> void
+
+      def smooth_change: () -> ClientFeatureToggler
+
+      private
+
+      def http_header_value: () -> String
+    end
+  end
+end
