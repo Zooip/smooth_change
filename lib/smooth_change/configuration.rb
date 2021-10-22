@@ -13,7 +13,7 @@ module SmoothChange
     private
 
     def set_defaults!
-      self.http_header_name = "X-ApiFeatureFlags"
+      self.http_header_name = "X-FeatureCapabilities"
       self.adapter = Adapters::Memory.new
     end
   end

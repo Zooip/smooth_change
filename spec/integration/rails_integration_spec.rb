@@ -8,7 +8,7 @@ RSpec.describe "Rails integration", type: :request do
       get "/api/test_opt_in", headers: headers
     end
 
-    context "without X-ApiFeatureFlags header" do
+    context "without X-FeatureCapabilities header" do
       let(:headers) { {} }
 
       it "get endpoint" do
@@ -16,16 +16,16 @@ RSpec.describe "Rails integration", type: :request do
       end
     end
 
-    context "with X-ApiFeatureFlags header set to opt-in" do
-      let(:headers) { { "X-ApiFeatureFlags" => "feature_opt_in" } }
+    context "with X-FeatureCapabilities header set to opt-in" do
+      let(:headers) { { "X-FeatureCapabilities" => "feature_opt_in" } }
 
       it "get endpoint" do
         expect(response).to have_attributes(body: { use_opt_in_feature: true }.to_json)
       end
     end
 
-    context "with X-ApiFeatureFlags header set to opt-out" do
-      let(:headers) { { "X-ApiFeatureFlags" => "!feature_opt_in" } }
+    context "with X-FeatureCapabilities header set to opt-out" do
+      let(:headers) { { "X-FeatureCapabilities" => "!feature_opt_in" } }
 
       it "get endpoint" do
         expect(response).to have_attributes(body: { use_opt_in_feature: false }.to_json)
@@ -38,7 +38,7 @@ RSpec.describe "Rails integration", type: :request do
       get "/api/test_opt_out", headers: headers
     end
 
-    context "without X-ApiFeatureFlags header" do
+    context "without X-FeatureCapabilities header" do
       let(:headers) { {} }
 
       it "get endpoint" do
@@ -46,16 +46,16 @@ RSpec.describe "Rails integration", type: :request do
       end
     end
 
-    context "with X-ApiFeatureFlags header set to opt-in" do
-      let(:headers) { { "X-ApiFeatureFlags" => "feature_opt_out" } }
+    context "with X-FeatureCapabilities header set to opt-in" do
+      let(:headers) { { "X-FeatureCapabilities" => "feature_opt_out" } }
 
       it "get endpoint" do
         expect(response).to have_attributes(body: { use_opt_out_feature: true }.to_json)
       end
     end
 
-    context "with X-ApiFeatureFlags header set to opt-out" do
-      let(:headers) { { "X-ApiFeatureFlags" => "!feature_opt_out" } }
+    context "with X-FeatureCapabilities header set to opt-out" do
+      let(:headers) { { "X-FeatureCapabilities" => "!feature_opt_out" } }
 
       it "get endpoint" do
         expect(response).to have_attributes(body: { use_opt_out_feature: false }.to_json)
@@ -68,7 +68,7 @@ RSpec.describe "Rails integration", type: :request do
       get "/api/test_model", headers: headers
     end
 
-    context "without X-ApiFeatureFlags header" do
+    context "without X-FeatureCapabilities header" do
       let(:headers) { {} }
 
       it "get endpoint" do
@@ -76,16 +76,16 @@ RSpec.describe "Rails integration", type: :request do
       end
     end
 
-    context "with X-ApiFeatureFlags header set to opt-in" do
-      let(:headers) { { "X-ApiFeatureFlags" => "feature_model" } }
+    context "with X-FeatureCapabilities header set to opt-in" do
+      let(:headers) { { "X-FeatureCapabilities" => "feature_model" } }
 
       it "get endpoint" do
         expect(response).to have_attributes(body: { use_model_feature: true }.to_json)
       end
     end
 
-    context "with X-ApiFeatureFlags header set to opt-out" do
-      let(:headers) { { "X-ApiFeatureFlags" => "!feature_model" } }
+    context "with X-FeatureCapabilities header set to opt-out" do
+      let(:headers) { { "X-FeatureCapabilities" => "!feature_model" } }
 
       it "get endpoint" do
         expect(response).to have_attributes(body: { use_model_feature: false }.to_json)
