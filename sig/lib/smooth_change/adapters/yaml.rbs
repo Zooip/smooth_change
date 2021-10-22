@@ -1,10 +1,5 @@
-
-
-
 module SmoothChange
-
   module Adapters
-
     # Load features from a YAML file
     class Yaml
       include _Adapter
