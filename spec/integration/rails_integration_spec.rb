@@ -11,7 +11,7 @@ RSpec.describe "Rails integration", type: :request do
     context "without X-FeatureCapabilities header" do
       let(:headers) { {} }
 
-      it "get endpoint" do
+      it "does not use feature" do
         expect(response).to have_attributes(body: { use_opt_in_feature: false }.to_json)
       end
     end
@@ -19,7 +19,7 @@ RSpec.describe "Rails integration", type: :request do
     context "with X-FeatureCapabilities header set to opt-in" do
       let(:headers) { { "X-FeatureCapabilities" => "feature_opt_in" } }
 
-      it "get endpoint" do
+      it "does use feature" do
         expect(response).to have_attributes(body: { use_opt_in_feature: true }.to_json)
       end
     end
@@ -27,7 +27,7 @@ RSpec.describe "Rails integration", type: :request do
     context "with X-FeatureCapabilities header set to opt-out" do
       let(:headers) { { "X-FeatureCapabilities" => "!feature_opt_in" } }
 
-      it "get endpoint" do
+      it "does not use feature" do
         expect(response).to have_attributes(body: { use_opt_in_feature: false }.to_json)
       end
     end
@@ -41,7 +41,7 @@ RSpec.describe "Rails integration", type: :request do
     context "without X-FeatureCapabilities header" do
       let(:headers) { {} }
 
-      it "get endpoint" do
+      it "does use feature" do
         expect(response).to have_attributes(body: { use_opt_out_feature: true }.to_json)
       end
     end
@@ -49,7 +49,7 @@ RSpec.describe "Rails integration", type: :request do
     context "with X-FeatureCapabilities header set to opt-in" do
       let(:headers) { { "X-FeatureCapabilities" => "feature_opt_out" } }
 
-      it "get endpoint" do
+      it "does use feature" do
         expect(response).to have_attributes(body: { use_opt_out_feature: true }.to_json)
       end
     end
@@ -57,7 +57,7 @@ RSpec.describe "Rails integration", type: :request do
     context "with X-FeatureCapabilities header set to opt-out" do
       let(:headers) { { "X-FeatureCapabilities" => "!feature_opt_out" } }
 
-      it "get endpoint" do
+      it "does not use feature" do
         expect(response).to have_attributes(body: { use_opt_out_feature: false }.to_json)
       end
     end
@@ -71,7 +71,7 @@ RSpec.describe "Rails integration", type: :request do
     context "without X-FeatureCapabilities header" do
       let(:headers) { {} }
 
-      it "get endpoint" do
+      it "does not use feature" do
         expect(response).to have_attributes(body: { use_model_feature: false }.to_json)
       end
     end
@@ -79,7 +79,7 @@ RSpec.describe "Rails integration", type: :request do
     context "with X-FeatureCapabilities header set to opt-in" do
       let(:headers) { { "X-FeatureCapabilities" => "feature_model" } }
 
-      it "get endpoint" do
+      it "does use feature" do
         expect(response).to have_attributes(body: { use_model_feature: true }.to_json)
       end
     end
@@ -87,7 +87,7 @@ RSpec.describe "Rails integration", type: :request do
     context "with X-FeatureCapabilities header set to opt-out" do
       let(:headers) { { "X-FeatureCapabilities" => "!feature_model" } }
 
-      it "get endpoint" do
+      it "does not use feature" do
         expect(response).to have_attributes(body: { use_model_feature: false }.to_json)
       end
     end
